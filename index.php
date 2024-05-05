@@ -132,7 +132,7 @@ $io->close();
 $io->request->giveBack($document);
 */
 
-print $document->application->name;
+print $document->buffer;
 ob_end_flush();
 
 __halt_compiler();

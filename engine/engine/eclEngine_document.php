@@ -4,18 +4,21 @@ class eclEngine_document
 {
     public eclEngine_application $application;
     public string $lang;
-    public $modules;
+    public eclEngine_modules $mod;
+    public eclEngine_render $render;
+    public $buffer = '';
 
     public function __construct()
     {
-        $this->modules = new eclEngine_modules($this);
+        $this->mod = new eclEngine_modules($this);
+        $this->render = new eclEngine_render($this);
     }
 
     public function route(array $path): void
     {
         global $system;
-        if(count($path) === 1) {
-            $path[] = '-index';
+        if (count($path) === 1) {
+            $path[] = '-home';
         }
         $this->application = $this->routeSubfolders($system, $path);
     }
@@ -55,7 +58,7 @@ class eclEngine_document
 
     public function render(): void
     {
-
+        $this->buffer = $this->render->render($this->mod->html);
     }
 
     public function selectLanguage(array|string $text): string

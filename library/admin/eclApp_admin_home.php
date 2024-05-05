@@ -1,9 +1,9 @@
 <?php
 
-class eclApp_admin_index extends eclApp
+class eclApp_admin_home extends eclApp
 {
-    public static $name = '-index';
-    public static $control = 'admin_index';
+    public static $name = '-home';
+    public static $control = 'admin_home';
 
     public static function constructorHelper(eclEngine_application $me): void
     {
