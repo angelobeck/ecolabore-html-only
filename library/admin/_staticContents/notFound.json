@@ -1,0 +1,20 @@
+{
+    "text": {
+        "title": {
+            "pt": {
+                "value": "Página não encontrada"
+            },
+            "en": {
+                "value": "Page not found"
+            }
+        },
+        "content": {
+            "pt": {
+                "value": "A página que você procura não foi encontrada."
+            },
+            "en": {
+                "value": "The page you are looking for was not found."
+            }
+        }
+    }
+}

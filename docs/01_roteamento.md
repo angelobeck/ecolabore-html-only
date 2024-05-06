@@ -146,3 +146,16 @@ public static childrenNames(eclEngine_application $parent): array
 ## Despachando a aplicação
 
 Ao terminar o roteamento, teremos um objeto eclEngine_application() que deverá ser despachado. Mais uma vez as classes ajudantes serão invocadas para atuar sobre os objetos.
+
+```
+public function dispatch(eclEngine_document $document): void
+{
+
+}
+```
+
+No despacho da aplicação vamos realizar três atividades principais:
+
+* Gerar formulários e receber os dados do usuário;
+* Definir módulos especiais, por exemplo para exibir os posts de um blog e 
+* Definir opções do menu e executar as ações do menu.

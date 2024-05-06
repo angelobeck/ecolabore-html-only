@@ -3,12 +3,12 @@
 class EclEngine_store
 {
     private $drivers = [];
-    public eclStore_control $control;
+    public eclStore_staticContent $staticContent;
     public eclStore_moduleTemplate $moduleTemplate;
 
     public function __construct()
     {
-        $this->control = new eclStore_control();
+        $this->staticContent = new eclStore_staticContent();
         $this->moduleTemplate = new eclStore_moduleTemplate();
     }
 

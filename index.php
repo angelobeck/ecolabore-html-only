@@ -25,7 +25,7 @@ define('PATH_PROFILES', __DIR__ . '/' . FOLDER_PROFILES);
 define('PATH_SHARED', __DIR__ . '/' . FOLDER_SHARED);
 define('PATH_TEMPLATES', __DIR__ . '/' . FOLDER_TEMPLATES);
 
-defined('SYSTEM_HOSTING_MODE') or define('SYSTEM_HOSTING_MODE', 0);
+defined('SYSTEM_HOSTING_MODE') or define('SYSTEM_HOSTING_MODE', 'single'); // 'single' | 'subfolders' | 'subdomains'
 defined('SYSTEM_HOST') or define('SYSTEM_HOST', 'localhost');
 defined('SYSTEM_DEFAULT_DOMAIN_NAME') or define('SYSTEM_DEFAULT_DOMAIN_NAME', 'admin');
 defined('SYSTEM_ADMIN_URI') or define('SYSTEM_ADMIN_URI', 'admin');
@@ -133,6 +133,7 @@ $io->request->giveBack($document);
 */
 
 print $document->buffer;
+
 ob_end_flush();
 
 __halt_compiler();

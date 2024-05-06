@@ -32,8 +32,8 @@ class eclEngine_application
             $this->domainName = $parent->domainName;
             $this->userName = $parent->userName;
         }
-        if (isset($this->helper::$control)) {
-            $this->data = $store->control->open($this->helper::$control);
+        if (isset($this->helper::$staticContent)) {
+            $this->data = $store->staticContent->open($this->helper::$staticContent);
         }
         if (isset($this->helper::$map)) {
             $this->map = $this->helper::$map;
